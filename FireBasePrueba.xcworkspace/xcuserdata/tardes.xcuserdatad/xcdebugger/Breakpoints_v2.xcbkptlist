@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "3581525B-BA5B-4318-8542-BC396F006AA9"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D47D5E74-6B29-48AA-8665-8D3EE4501EA2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FireBasePrueba/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+<<<<<<< HEAD
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+=======
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+>>>>>>> 8aba4c7 (Integrados crashlytics y remoteConfig)
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
