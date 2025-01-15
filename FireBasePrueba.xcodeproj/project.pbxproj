@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B2C4E6032D384A480089EE29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2C4E6012D384A480089EE29 /* Main.storyboard */; };
 		B2D2E1B62D36F68D00936BAD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2D2E1B52D36F68D00936BAD /* GoogleService-Info.plist */; };
 		B2E0E40B2D317FC50098040A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E0E40A2D317FC50098040A /* AppDelegate.swift */; };
 		B2E0E40D2D317FC50098040A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E0E40C2D317FC50098040A /* SceneDelegate.swift */; };
 		B2E0E40F2D317FC50098040A /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E0E40E2D317FC50098040A /* AuthViewController.swift */; };
-		B2E0E4122D317FC50098040A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B2E0E4112D317FC50098040A /* Base */; };
 		B2E0E4142D317FC60098040A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2E0E4132D317FC60098040A /* Assets.xcassets */; };
 		B2E0E4172D317FC60098040A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B2E0E4162D317FC60098040A /* Base */; };
 		B2E0E4212D319A130098040A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E0E4202D319A130098040A /* HomeViewController.swift */; };
@@ -22,12 +22,12 @@
 		0713A19EDC50DC1A4C8807CC /* Pods-FireBasePrueba.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireBasePrueba.debug.xcconfig"; path = "Target Support Files/Pods-FireBasePrueba/Pods-FireBasePrueba.debug.xcconfig"; sourceTree = "<group>"; };
 		93F70BB37791CD4F09259457 /* Pods-FireBasePrueba.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireBasePrueba.release.xcconfig"; path = "Target Support Files/Pods-FireBasePrueba/Pods-FireBasePrueba.release.xcconfig"; sourceTree = "<group>"; };
 		AB8A032A6BD8B353C334932E /* Pods_FireBasePrueba.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireBasePrueba.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2C4E6022D384A480089EE29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2D2E1B52D36F68D00936BAD /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B2E0E4072D317FC50098040A /* FireBasePrueba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireBasePrueba.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E0E40A2D317FC50098040A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2E0E40C2D317FC50098040A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B2E0E40E2D317FC50098040A /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
-		B2E0E4112D317FC50098040A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2E0E4132D317FC60098040A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2E0E4162D317FC60098040A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2E0E4182D317FC60098040A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,11 +84,11 @@
 		B2E0E4092D317FC50098040A /* FireBasePrueba */ = {
 			isa = PBXGroup;
 			children = (
+				B2C4E6012D384A480089EE29 /* Main.storyboard */,
 				B2D2E1B52D36F68D00936BAD /* GoogleService-Info.plist */,
 				B2E0E40A2D317FC50098040A /* AppDelegate.swift */,
 				B2E0E40C2D317FC50098040A /* SceneDelegate.swift */,
 				B2E0E40E2D317FC50098040A /* AuthViewController.swift */,
-				B2E0E4102D317FC50098040A /* Main.storyboard */,
 				B2E0E4132D317FC60098040A /* Assets.xcassets */,
 				B2E0E4152D317FC60098040A /* LaunchScreen.storyboard */,
 				B2E0E4182D317FC60098040A /* Info.plist */,
@@ -161,7 +161,7 @@
 				B2E0E4142D317FC60098040A /* Assets.xcassets in Resources */,
 				B2D2E1B62D36F68D00936BAD /* GoogleService-Info.plist in Resources */,
 				B2E0E4172D317FC60098040A /* Base in Resources */,
-				B2E0E4122D317FC50098040A /* Base in Resources */,
+				B2C4E6032D384A480089EE29 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,10 +247,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B2E0E4102D317FC50098040A /* Main.storyboard */ = {
+		B2C4E6012D384A480089EE29 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B2E0E4112D317FC50098040A /* Base */,
+				B2C4E6022D384A480089EE29 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

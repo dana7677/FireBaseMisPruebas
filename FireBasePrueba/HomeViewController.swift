@@ -20,15 +20,10 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var PasswordLabel: UILabel!
     @IBOutlet weak var CloseButton: UIButton!
     
-<<<<<<< HEAD
     private let email:String
     private let provider:ProviderType
     
-=======
     @IBOutlet weak var ErrorButton: UIButton!
-    var email:String = ""
-    var provider:ProviderType = ProviderType.basic
->>>>>>> 8aba4c7 (Integrados crashlytics y remoteConfig)
     
     init(email:String, provider:ProviderType){
         self.email = email

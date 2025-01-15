@@ -19,23 +19,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ZZ-ZK-1Gz">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
-<<<<<<< HEAD
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UserEmail@gmail.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oEO-Z0-Tc0">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="34.333333333333336"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="email"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="UserPassword***" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PSX-yH-wXk">
-                                        <rect key="frame" x="0.0" y="42.333333333333343" width="361" height="34.333333333333343"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
-                                    </textField>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RVi-JG-th3">
-                                        <rect key="frame" x="0.0" y="84.666666666666657" width="361" height="34.333333333333343"/>
-=======
                                     <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="Qnn-Y1-xeV">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="1000"/>
->>>>>>> 8aba4c7 (Integrados crashlytics y remoteConfig)
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2R6-IT-ckp">
                                                 <rect key="frame" x="8" y="268" width="377" height="127"/>
@@ -194,6 +179,7 @@
                         <outlet property="LoginButton" destination="JaX-Hi-qTr" id="JKg-sv-TP7"/>
                         <outlet property="UserEmail" destination="oEO-Z0-Tc0" id="WRl-2C-eCp"/>
                         <outlet property="UserPassword" destination="PSX-yH-wXk" id="yVg-SB-upl"/>
+                        <segue destination="fZs-uo-pcp" kind="show" identifier="goToHome" id="uas-N5-ETk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -208,35 +194,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-<<<<<<< HEAD
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sa0-rR-f3a">
-                                <rect key="frame" x="16" y="75" width="361" height="91"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="948-BC-H69">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="20.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="St5-PX-axI">
-                                        <rect key="frame" x="0.0" y="28.333333333333329" width="361" height="20.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6r-Mb-huH">
-                                        <rect key="frame" x="0.0" y="56.666666666666657" width="361" height="34.333333333333343"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Close Session">
-                                            <backgroundConfiguration key="background">
-                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                            </backgroundConfiguration>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="CloseSession:" destination="fZs-uo-pcp" eventType="touchUpInside" id="Pb1-IM-hDs"/>
-                                        </connections>
-                                    </button>
-=======
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iv4-gx-2IU">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
@@ -300,7 +257,6 @@
                                             <constraint firstAttribute="trailing" secondItem="sa0-rR-f3a" secondAttribute="trailing" constant="8" id="u3N-ar-Dvg"/>
                                         </constraints>
                                     </view>
->>>>>>> 8aba4c7 (Integrados crashlytics y remoteConfig)
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="btb-g8-4h4" firstAttribute="width" secondItem="12R-Rh-8Ka" secondAttribute="width" id="52x-e6-aAx"/>
@@ -322,6 +278,7 @@
                             <constraint firstItem="Iv4-gx-2IU" firstAttribute="leading" secondItem="cD6-JP-WaM" secondAttribute="leading" id="tOU-lM-Dk0"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="B3y-W4-HUD"/>
                     <connections>
                         <outlet property="CloseButton" destination="L6r-Mb-huH" id="sl7-d7-UyV"/>
                         <outlet property="ErrorButton" destination="Edg-tP-4EZ" id="rER-nR-dLQ"/>
