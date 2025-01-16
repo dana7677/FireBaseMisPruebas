@@ -131,8 +131,7 @@ static NSInteger const kRCNFetchResponseHTTPStatusCodeGatewayTimeout = 504;
 #pragma mark - Fetch Config API
 
 - (void)fetchConfigWithExpirationDuration:(NSTimeInterval)expirationDuration
-                        completionHandler:
-                            (_Nullable FIRRemoteConfigFetchCompletion)completionHandler {
+                        completionHandler:(FIRRemoteConfigFetchCompletion)completionHandler {
   // Note: We expect the googleAppID to always be available.
   BOOL hasDeviceContextChanged =
       FIRRemoteConfigHasDeviceContextChanged(_settings.deviceContext, _options.googleAppID);

@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseRemoteConfig
+import FirebaseFirestore
 
 enum ProviderType:String{
     case basic
@@ -22,6 +23,21 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var CountryPicker: UIPickerView!
     @IBOutlet weak var GenderPicker: UIPickerView!
     
+    @IBOutlet weak var BirthdayDA: UILabel!
+    @IBOutlet weak var dateBirthDay: UIDatePicker!
+    
+    //MARK: ChangingDateBirthday
+    
+    @IBAction func dateBirthday(_ sender: Any) {
+        
+        
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        BirthdayDA.text = "Birthday Date:" + dateFormatter.string(from: dateBirthDay.date)
+        self.view.endEditing(true)
+        
+    }
     @IBOutlet weak var favoriteAnimalLabel: UITextField!
     
     
@@ -36,12 +52,18 @@ class HomeViewController: UIViewController {
     var selectedGender = "None"
     var favoriteAnimal = "None"
     
+    //DataBase
+    private let db = Firestore.firestore()
+    
+    
     
     override func viewDidLoad() {
         UserLabel.text = email
         PasswordLabel.text = provider.rawValue
         CountryPicker.delegate = self
         CountryPicker.dataSource = self
+        GenderPicker.delegate = self
+        GenderPicker.dataSource = self
         
         super.viewDidLoad()
 
@@ -99,7 +121,30 @@ class HomeViewController: UIViewController {
     @IBAction func OnSaveData(_ sender: Any) {
         
         
+        db.collection("users").document(email).setData([
+            "country":selectedCountry,
+            "gender":selectedGender,
+            "birthday":BirthdayDA.text ?? "None",
+            "animal":favoriteAnimalLabel.text ?? "None"]
+        )
         
+    }
+    @IBAction func ReloadData(_ sender: Any) {
+        
+        db.collection("users").document(email).getDocument{
+            (documentSnapshot, error) in
+            
+            if let document = documentSnapshot, error == nil{
+                if let animal = document.get("animal") as? String {
+                    self.favoriteAnimalLabel.text = animal
+                }
+            }
+        }
+        
+    }
+    @IBAction func ClearData(_ sender: Any) {
+        
+        db.collection("users").document(email).delete()
         
     }
     
@@ -114,7 +159,9 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UIPickerViewDelegate, UIPickerViewDataSource
 {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        
+            return 1
+    
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {

@@ -53,8 +53,7 @@ typedef void (^RCNConfigFetchCompletion)(FIRRemoteConfigFetchStatus status,
 /// @param expirationDuration  Expiration duration, in seconds.
 /// @param completionHandler   Callback handler.
 - (void)fetchConfigWithExpirationDuration:(NSTimeInterval)expirationDuration
-                        completionHandler:
-                            (_Nullable FIRRemoteConfigFetchCompletion)completionHandler;
+                        completionHandler:(FIRRemoteConfigFetchCompletion)completionHandler;
 
 /// Fetches config data immediately, keyed by namespace. Completion block will be called on the main
 /// queue.

@@ -111,7 +111,7 @@ const NSTimeInterval kDatabaseLoadTimeoutSecs = 30.0;
 #pragma mark - database
 
 /// This method is only meant to be called at init time. The underlying logic will need to be
-/// reevaluated if the assumption changes at a later time.
+/// revaluated if the assumption changes at a later time.
 - (void)loadConfigFromMainTable {
   if (!_DBManager) {
     return;
