@@ -19,25 +19,29 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var UserLabel: UILabel!
     @IBOutlet weak var PasswordLabel: UILabel!
     @IBOutlet weak var CloseButton: UIButton!
+    @IBOutlet weak var CountryPicker: UIPickerView!
+    @IBOutlet weak var GenderPicker: UIPickerView!
+    
+    @IBOutlet weak var favoriteAnimalLabel: UITextField!
+    
     
     @IBOutlet weak var ErrorButton: UIButton!
     var email:String = ""
     var provider:ProviderType = ProviderType.basic
     
-    /*
-    init(email:String, provider:ProviderType){
-        self.email = email
-        self.provider = provider
-        super.init(nibName: "HomeViewController", bundle: nil)
-    }
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-     */
+    //UserInfo
+    let countrys = ["Spain","Venezuela","Morroco","Italy","Brasil","Honduras","England"]
+    var selectedCountry = "None"
+    let gender = ["Male","Female","None","Combat Helicopter","Brasil"]
+    var selectedGender = "None"
+    var favoriteAnimal = "None"
+    
     
     override func viewDidLoad() {
         UserLabel.text = email
         PasswordLabel.text = provider.rawValue
+        CountryPicker.delegate = self
+        CountryPicker.dataSource = self
         
         super.viewDidLoad()
 
@@ -59,6 +63,17 @@ class HomeViewController: UIViewController {
             }}
     }
     
+    //MARK: FavoriteAnimalSet
+    
+    @IBAction func FavoriteAnimalSet(_ sender: Any) {
+        
+        favoriteAnimal = favoriteAnimalLabel.text!
+        
+    }
+    
+    
+    //MARK: FatalError && CloseSession
+    
     @IBAction func CloseSession(_ sender: Any) {
         
         switch provider{
@@ -72,20 +87,70 @@ class HomeViewController: UIViewController {
             }
         }
     }
+    
     @IBAction func FatalErrorPressed(_ sender: Any) {
         
         fatalError()
         
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //MARK: SaveData && DataBase
+    
+    @IBAction func OnSaveData(_ sender: Any) {
+        
+        
+        
+        
     }
-    */
+    
 
+}
+
+
+
+
+//MARK: PickerViewData && Delegate
+
+extension HomeViewController: UIPickerViewDelegate, UIPickerViewDataSource
+{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        if(pickerView == CountryPicker)
+        {
+            return countrys.count
+        }
+        else
+        {
+            return gender.count
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
+    {
+        if(pickerView == CountryPicker)
+        {
+            return countrys[row]
+        }
+        else
+        {
+            return gender[row]
+        }
+        
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        if(pickerView == CountryPicker)
+        {
+            selectedCountry = countrys[row]
+        }
+        else
+        {
+            selectedGender = gender[row]
+        }
+        
+    }
 }

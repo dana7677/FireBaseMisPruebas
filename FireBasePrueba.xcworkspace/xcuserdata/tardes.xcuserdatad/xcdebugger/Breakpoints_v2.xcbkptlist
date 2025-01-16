@@ -7,22 +7,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D47D5E74-6B29-48AA-8665-8D3EE4501EA2"
+            uuid = "CA35CD3A-2283-4FD7-816F-A197DF61874A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FireBasePrueba/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-<<<<<<< HEAD
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-=======
-            startingLineNumber = "38"
-            endingLineNumber = "38"
->>>>>>> 8aba4c7 (Integrados crashlytics y remoteConfig)
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

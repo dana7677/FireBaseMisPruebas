@@ -18,6 +18,8 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var UserPassword: UITextField!
     @IBOutlet weak var UserEmail: UITextField!
     
+    //MARK: SignByGoogle
+    
     @IBAction func SignByGooglePress(_ sender: Any) {
         
         // Configure Google SignIn with Firebase
@@ -45,7 +47,7 @@ class AuthViewController: UIViewController {
         
     }
     
-    
+    //MARK: ForgotPassWord
     
     @IBAction func forgotPassword(_ sender: Any) {
         let username = UserEmail.text!
@@ -59,6 +61,7 @@ class AuthViewController: UIViewController {
                 self.present(alert, animated: true)
     }
     
+    //MARK: CreatePressed
     
     @IBAction func CreatePressed(_ sender: UIButton) {
         
@@ -81,6 +84,9 @@ class AuthViewController: UIViewController {
             
         }
     }
+    
+    //MARK: LoginPressed
+    
     @IBAction func LoginPressed(_ sender: Any) {
         
         if let email = UserEmail.text,let password =
@@ -104,6 +110,8 @@ class AuthViewController: UIViewController {
         }
     }
     
+    //MARK: Prepare Change ViewController
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "goToHome") {
                 let homeViewController = segue.destination as! HomeViewController
@@ -111,6 +119,8 @@ class AuthViewController: UIViewController {
             homeViewController.provider = ProviderType.basic
         }
     }
+    
+    //MARK: ViewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
