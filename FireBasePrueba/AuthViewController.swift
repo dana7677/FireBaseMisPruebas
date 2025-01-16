@@ -68,8 +68,7 @@ class AuthViewController: UIViewController {
             Auth.auth().createUser(withEmail: email, password: password){
                 (result,error)in
                 if let result = result , error == nil{
-                    self.navigationController?
-                        .pushViewController(HomeViewController(email: result.user.email!, provider: .basic), animated: true)
+                    self.performSegue(withIdentifier: "goToHome", sender: nil)
                     
                 }else{
                     let alertController = UIAlertController(title: "Error", message: "Se ha producido un error registrando al usuario", preferredStyle: .alert)
@@ -90,9 +89,9 @@ class AuthViewController: UIViewController {
             Auth.auth().signIn(withEmail: email, password: password){
                 (result,error)in
                 if let result = result , error == nil{
-                    self.navigationController?
-                        .pushViewController(HomeViewController(email: result.user.email!, provider: .basic), animated: true)
-                    
+                    //self.navigationController?
+                        //.pushViewController(HomeViewController(email: result.user.email!, provider: .basic), animated: true)
+                    self.performSegue(withIdentifier: "goToHome", sender: nil)
                 }else{
                     let alertController = UIAlertController(title: "Error", message: "Se ha producido un error registrando al usuario", preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
@@ -102,6 +101,14 @@ class AuthViewController: UIViewController {
                 
             }
             
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "goToHome") {
+                let homeViewController = segue.destination as! HomeViewController
+                homeViewController.email = UserEmail.text!
+            homeViewController.provider = ProviderType.basic
         }
     }
     

@@ -20,11 +20,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var PasswordLabel: UILabel!
     @IBOutlet weak var CloseButton: UIButton!
     
-    private let email:String
-    private let provider:ProviderType
-    
     @IBOutlet weak var ErrorButton: UIButton!
+    var email:String = ""
+    var provider:ProviderType = ProviderType.basic
     
+    /*
     init(email:String, provider:ProviderType){
         self.email = email
         self.provider = provider
@@ -33,11 +33,13 @@ class HomeViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+     */
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         UserLabel.text = email
         PasswordLabel.text = provider.rawValue
+        
+        super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
