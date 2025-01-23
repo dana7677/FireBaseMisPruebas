@@ -16,7 +16,10 @@ enum ProviderType:String{
 }
 
 class HomeViewController: UIViewController {
+    
+    var list:[DataPhotos] = []
 
+    @IBOutlet weak var ImgNasaRover: UIImageView!
     @IBOutlet weak var UserLabel: UILabel!
     @IBOutlet weak var PasswordLabel: UILabel!
     @IBOutlet weak var CloseButton: UIButton!
@@ -68,7 +71,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
+        findNasaMarsRoverBySun(name: "1000")
         // Remote Config
         let remoteConfig = RemoteConfig.remoteConfig()
         remoteConfig.fetchAndActivate{(status , error) in
@@ -200,4 +203,26 @@ extension HomeViewController: UIPickerViewDelegate, UIPickerViewDataSource
         }
         
     }
+    
+    func loadData()
+    {
+        let newData = list[0]
+            //newData.img_src
+        //ImgMarsRover.loadFrom
+        ImgNasaRover.loadFrom(url: newData.img_src.replacingOccurrences(of: "http", with: "https"))
+    }
+    
+    func findNasaMarsRoverBySun(name: String) {
+               Task {
+                   do {
+                       list = try await NasaMarsRoverProvider.findPhotoMarsRovers(name: "1000")
+                       DispatchQueue.main.async {
+                           //TODO Load Image
+                           self.loadData()
+                       }
+                   } catch {
+                       print(error)
+                   }
+               }
+           }
 }

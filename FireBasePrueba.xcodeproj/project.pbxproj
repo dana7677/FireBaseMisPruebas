@@ -15,6 +15,9 @@
 		B2E0E4142D317FC60098040A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2E0E4132D317FC60098040A /* Assets.xcassets */; };
 		B2E0E4172D317FC60098040A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B2E0E4162D317FC60098040A /* Base */; };
 		B2E0E4212D319A130098040A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E0E4202D319A130098040A /* HomeViewController.swift */; };
+		B2E65D4A2D42C63F00D4CAB9 /* NasaMarsRoverProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E65D492D42C63F00D4CAB9 /* NasaMarsRoverProvider.swift */; };
+		B2E65D4E2D42C76300D4CAB9 /* NarsMarsRoverResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E65D4D2D42C76300D4CAB9 /* NarsMarsRoverResponse.swift */; };
+		B2E65D552D42CEC300D4CAB9 /* UIImageViewExtensionss.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E65D542D42CEC300D4CAB9 /* UIImageViewExtensionss.swift */; };
 		E95BE5BA63770603F77026E0 /* Pods_FireBasePrueba.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8A032A6BD8B353C334932E /* Pods_FireBasePrueba.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +36,9 @@
 		B2E0E4162D317FC60098040A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2E0E4182D317FC60098040A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2E0E4202D319A130098040A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B2E65D492D42C63F00D4CAB9 /* NasaMarsRoverProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaMarsRoverProvider.swift; sourceTree = "<group>"; };
+		B2E65D4D2D42C76300D4CAB9 /* NarsMarsRoverResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NarsMarsRoverResponse.swift; sourceTree = "<group>"; };
+		B2E65D542D42CEC300D4CAB9 /* UIImageViewExtensionss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensionss.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,8 @@
 		B2E0E4092D317FC50098040A /* FireBasePrueba */ = {
 			isa = PBXGroup;
 			children = (
+				B2E65D4F2D42CE1900D4CAB9 /* Utils */,
+				B2E65D482D42C5E000D4CAB9 /* Data */,
 				B28D44992D4028CE007147A2 /* FireBasePrueba.entitlements */,
 				B2C4E6012D384A480089EE29 /* Main.storyboard */,
 				B2D2E1B52D36F68D00936BAD /* GoogleService-Info.plist */,
@@ -97,6 +105,23 @@
 				B2E0E4202D319A130098040A /* HomeViewController.swift */,
 			);
 			path = FireBasePrueba;
+			sourceTree = "<group>";
+		};
+		B2E65D482D42C5E000D4CAB9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B2E65D492D42C63F00D4CAB9 /* NasaMarsRoverProvider.swift */,
+				B2E65D4D2D42C76300D4CAB9 /* NarsMarsRoverResponse.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B2E65D4F2D42CE1900D4CAB9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B2E65D542D42CEC300D4CAB9 /* UIImageViewExtensionss.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,8 +288,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2E0E40F2D317FC50098040A /* AuthViewController.swift in Sources */,
+				B2E65D4A2D42C63F00D4CAB9 /* NasaMarsRoverProvider.swift in Sources */,
 				B2E0E40B2D317FC50098040A /* AppDelegate.swift in Sources */,
 				B2E0E40D2D317FC50098040A /* SceneDelegate.swift in Sources */,
+				B2E65D4E2D42C76300D4CAB9 /* NarsMarsRoverResponse.swift in Sources */,
+				B2E65D552D42CEC300D4CAB9 /* UIImageViewExtensionss.swift in Sources */,
 				B2E0E4212D319A130098040A /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
