@@ -13,6 +13,8 @@ pod 'FirebaseFirestore'
 pod 'FirebaseCrashlytics'
 pod 'GoogleSignIn'
 pod 'FirebaseRemoteConfig'
+pod 'FBSDKLoginKit'
+
 #pod 'FirebaseFirestoreSwift'
 post_install do |installer|
   installer.pods_project.targets.each do |target|

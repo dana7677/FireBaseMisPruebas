@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseCore
 import GoogleSignIn
+import FBSDKCoreKit
 
 
 @main
@@ -25,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Create Google Sign In configuration object.
         let config = GIDConfiguration(clientID: clientID)
         GIDSignIn.sharedInstance.configuration = config
+       
         
         // Override point for customization after application launch.
         return true
@@ -35,6 +37,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      open url: URL,
                      options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
       return GIDSignIn.sharedInstance.handle(url)
+        || ApplicationDelegate.shared.application(app,open: url,sourceApplication:
+                    options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,annotation: options[UIApplication.OpenURLOptionsKey.annotation]
+                )
     }
     
     // MARK: UISceneSession Lifecycle

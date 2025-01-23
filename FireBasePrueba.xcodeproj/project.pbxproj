@@ -22,6 +22,7 @@
 		0713A19EDC50DC1A4C8807CC /* Pods-FireBasePrueba.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireBasePrueba.debug.xcconfig"; path = "Target Support Files/Pods-FireBasePrueba/Pods-FireBasePrueba.debug.xcconfig"; sourceTree = "<group>"; };
 		93F70BB37791CD4F09259457 /* Pods-FireBasePrueba.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireBasePrueba.release.xcconfig"; path = "Target Support Files/Pods-FireBasePrueba/Pods-FireBasePrueba.release.xcconfig"; sourceTree = "<group>"; };
 		AB8A032A6BD8B353C334932E /* Pods_FireBasePrueba.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireBasePrueba.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B28D44992D4028CE007147A2 /* FireBasePrueba.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FireBasePrueba.entitlements; sourceTree = "<group>"; };
 		B2C4E6022D384A480089EE29 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2D2E1B52D36F68D00936BAD /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B2E0E4072D317FC50098040A /* FireBasePrueba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireBasePrueba.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +85,7 @@
 		B2E0E4092D317FC50098040A /* FireBasePrueba */ = {
 			isa = PBXGroup;
 			children = (
+				B28D44992D4028CE007147A2 /* FireBasePrueba.entitlements */,
 				B2C4E6012D384A480089EE29 /* Main.storyboard */,
 				B2D2E1B52D36F68D00936BAD /* GoogleService-Info.plist */,
 				B2E0E40A2D317FC50098040A /* AppDelegate.swift */,
@@ -414,6 +416,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FireBasePrueba/FireBasePrueba.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -442,6 +445,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FireBasePrueba/FireBasePrueba.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;

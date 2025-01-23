@@ -10,9 +10,10 @@ import FirebaseAuth
 import FirebaseAnalytics
 import GoogleSignIn
 import FirebaseRemoteConfig
+import FBSDKLoginKit
 
 class AuthViewController: UIViewController {
-
+    
     @IBOutlet weak var LoginButton: UIButton!
     @IBOutlet weak var CreateButton: UIButton!
     @IBOutlet weak var UserPassword: UITextField!
@@ -23,27 +24,53 @@ class AuthViewController: UIViewController {
     @IBAction func SignByGooglePress(_ sender: Any) {
         
         // Configure Google SignIn with Firebase
-                // Start the sign in flow!
-                GIDSignIn.sharedInstance.signIn(withPresenting: self) { [unowned self] result, error in
+        // Start the sign in flow!
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { [unowned self] result, error in
+            guard error == nil else {
+                return
+            }
+            
+            guard let user = result?.user, let idToken = user.idToken?.tokenString else {
+                return
+            }
+            
+            let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: user.accessToken.tokenString)
+            
+            Auth.auth().signIn(with: credential) { result, error in
+                guard error == nil else {
+                    return
+                }
+                
+                // At this point, our user is signed in
+                self.performSegue(withIdentifier: "goToHome", sender: nil)
+            }
+        }
+        
+    }
+    @IBAction func SignInFaceBook(_ sender: Any) {
+        
+        let loginManager = LoginManager()
+        loginManager.logOut()
+        loginManager.logIn(permissions: ["email"], from: self) { LoginManagerLoginResult, error in
+            if let error = error
+            {
+                print("Error")
+                return
+            }
+            let token = LoginManagerLoginResult?.token?.tokenString
+            if(token != nil)
+            {
+                let credential = FacebookAuthProvider.credential(withAccessToken: token!)
+                Auth.auth().signIn(with: credential) { result, error in
                     guard error == nil else {
                         return
                     }
-
-                    guard let user = result?.user, let idToken = user.idToken?.tokenString else {
-                        return
-                    }
-
-                    let credential = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: user.accessToken.tokenString)
-
-                    Auth.auth().signIn(with: credential) { result, error in
-                        guard error == nil else {
-                            return
-                        }
-                        
-                        // At this point, our user is signed in
-                        self.performSegue(withIdentifier: "goToHome", sender: nil)
-                    }
+                    
+                    // At this point, our user is signed in
+                    self.performSegue(withIdentifier: "goToHome", sender: nil)
                 }
+            }
+        }
         
     }
     
@@ -138,7 +165,6 @@ class AuthViewController: UIViewController {
         remoteConfig.setDefaults(["show_error_button":NSNumber(true),"error_button_text":NSString("Forzar error")])
         
     }
-
 
 }
 
